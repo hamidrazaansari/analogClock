@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif, monospace;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(43, 40, 40), rgb(42, 42, 40));
+ }
+.clock{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: url("./hamid.png");
+    background-size: cover;
+}
+.circle{
+    height: 100%;
+    width: 100%;
+    border: 4px solid #6d6fd5;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px aqua;
+    overflow: hidden;
+
+}
+.hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    transform: rotate(90deg);
+}
+.hour-hand {
+    width: 6px;
+    height: 28%;
+    background: rgb(233, 23, 244);
+    z-index: 3;
+    border-radius: 50px;
+}
+.minute-hand {
+    width: 4px;
+    height: 38%;
+    background: #047ef7;
+    z-index: 2;
+    border-radius: 50px;
+}
+.seconds-hand {
+    width: 2px;
+    height: 45%;
+    background: linear-gradient(45deg, #F88E8D, #5B6FE5);
+    z-index: 1;
+    border-radius: 50px;
+}
+.number {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    top: 52%;
+    left: 52%;
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-120px) rotate(calc(-1 * var(--angle)));
+}
+.date{
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 133px;
+    left: 57px;
+    letter-spacing: 2px;
+}
